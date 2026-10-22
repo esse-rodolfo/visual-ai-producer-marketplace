@@ -32,7 +32,7 @@ Nada disso aparece no catálogo do Claude: leia pelo caminho, com `Read`.
 | Foto de produto · cards · thumbnail · explicativo | `$H/higgsfield-product-photoshoot/` · `-marketplace-cards/` · `-youtube-thumbnail/` · `-video-explainer/` |
 | Marca (paleta, logo, brandbook) | `$H/higgsfield-brandkit/SKILL.md` |
 | Rosto de pessoa real (com autorização) | `$H/higgsfield-soul-id/SKILL.md` |
-| Modelo 3D a partir de imagem | `$H/higgsfield-generate/SKILL.md` (§3D, `multi_image_to_3d`); com o Blender aberto, as tools `bl_generate_image`, `bl_generate_3d`, `bl_image_to_3d` |
+| Modelo 3D, textura, GLB | skill `gerar-3d` deste plugin |
 
 As skills oficiais citam as irmãs pelo nome ("use `higgsfield-brandkit`
 instead"): o nome é a pasta em `$H/`, não uma skill invocável.

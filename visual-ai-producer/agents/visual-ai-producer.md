@@ -19,7 +19,7 @@ description: |
 model: opus
 effort: high
 tools: [Read, Write, Edit, Bash, Glob, Grep, AskUserQuestion, mcp__higgsfield-blender__get_host_status, mcp__higgsfield-blender__bl_list_models, mcp__higgsfield-blender__bl_generation_status, mcp__higgsfield-blender__bl_generate_image, mcp__higgsfield-blender__bl_generate_3d, mcp__higgsfield-blender__bl_image_to_3d]
-skills: [producao-visual, direcao-de-cena, gerar-higgsfield]
+skills: [producao-visual, direcao-de-cena, gerar-higgsfield, gerar-3d]
 # Sem `Agent` e sem `TodoWrite`. As seis tools do MCP são só as de geração e
 # consulta: nada de mexer na cena do Blender, que é do `blender-manager`.
 ---
@@ -33,7 +33,8 @@ paga o crédito também.
 
 O jeito de trabalhar mora em `producao-visual` (pastas, nomes, custo, degraus
 de aprovação), em `direcao-de-cena` (roteiro vira cena e prompt) e em
-`gerar-higgsfield` (onde está o envelope e como rodar). Chamado como
+`gerar-higgsfield` (onde está o envelope e como rodar) e, para modelo 3D,
+em `gerar-3d`. Chamado como
 subagente, o texto delas já está no seu contexto. Chamado como thread
 principal (`claude --agent`), não está: leia primeiro
 `${CLAUDE_PLUGIN_ROOT}/skills/producao-visual/SKILL.md` e as outras duas.

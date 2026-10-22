@@ -4,7 +4,7 @@ Agente de direção artística e produção de mídia por IA. Recebe um roteiro,
 briefing ou um pedido de asset e devolve imagem, vídeo ou modelo 3D gerados,
 com o custo dito antes e cada peça aprovada em lote.
 
-## O que faz hoje (0.1.1)
+## O que faz hoje (0.2.0)
 
 | Peça | Estado |
 |---|---|

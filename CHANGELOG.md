@@ -3,6 +3,15 @@
 Formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
 versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.2.0] - 2026-10-22
+
+### Adicionado
+
+- Skill `gerar-3d`: modelo 3D, textura e GLB por IA, pelo CLI ou pelas
+  ferramentas `bl_generate_*` do conector, com a tabela de modelos e a trava
+  de custo que vieram do `blender-manager` 0.7.0. O GLB vai para
+  `producao/entregues/` e o `blender-manager` importa.
+
 ## [0.1.1] - 2026-10-22
 
 ### Corrigido
