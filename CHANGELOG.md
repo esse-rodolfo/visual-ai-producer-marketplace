@@ -1,0 +1,23 @@
+# Changelog
+
+Formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
+versionamento [SemVer](https://semver.org/lang/pt-BR/).
+
+## [0.1.0] - 2026-10-22
+
+### Adicionado
+
+- Agente `visual-ai-producer`: direção artística e produção de imagem, vídeo
+  e modelo 3D por IA. Cinco travas no corpo: custo antes e Sim depois, só foto
+  do cliente como imagem de entrada, quadro aprovado antes do clipe, registro
+  de cada job no projeto, e `higgsfield auth token` nunca.
+- Skill `producao-visual`: pasta `producao/` no planning do projeto, nomes de
+  arquivo, os três degraus de aprovação, tabela de custo medida em 22/10 e
+  peso alvo para web.
+- Skill `direcao-de-cena`: roteiro vira tabela de cenas, prompt de imagem e
+  prompt de movimento por cena, personagem por imagem de referência.
+- Skill `gerar-higgsfield`: router para o envelope em
+  `~/.claude/plugins/data/`, que guarda a biblioteca de prompt da O-Side Media
+  (MIT) e o pacote oficial `higgsfield-ai/skills`, fora do catálogo global.
+- Setup e doctor cobrem o CLI, o envelope, o deny do comando que imprime o
+  token, o MCP `higgsfield-blender` e a ausência de skill Higgsfield global.

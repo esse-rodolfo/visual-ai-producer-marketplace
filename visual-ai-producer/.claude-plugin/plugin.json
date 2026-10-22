@@ -1,0 +1,10 @@
+{
+  "name": "visual-ai-producer",
+  "displayName": "Visual AI Producer",
+  "version": "0.1.0",
+  "description": "Agente de direcao artistica e producao de midia por IA: transforma roteiro em cenas e prompts, monta moodboard, mantem personagem consistente, diz o custo antes e gera imagem, video e modelo 3D em lote aprovado. Usa o Higgsfield (CLI e MCP) com as skills oficiais e a biblioteca de prompt da O-Side Media num envelope privado. So foto do cliente entra como imagem de entrada.",
+  "author": { "name": "Rodolfo", "url": "https://github.com/esse-rodolfo" },
+  "repository": "https://github.com/esse-rodolfo/visual-ai-producer-marketplace",
+  "license": "MIT",
+  "keywords": ["higgsfield", "imagem", "video", "3d", "ia", "moodboard", "seedance"]
+}

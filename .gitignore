@@ -1,0 +1,23 @@
+# Segredos — nunca versionar
+.env
+.env.*
+!.env.example
+config.env
+*.token
+token.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# SO / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Runtime do Claude Code
+.claude/settings.local.json

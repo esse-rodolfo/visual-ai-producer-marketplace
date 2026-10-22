@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "visual-ai-producer-marketplace",
+  "owner": { "name": "Rodolfo (esse-rodolfo)" },
+  "description": "Marketplace do plugin visual-ai-producer — agente de direção artística e produção de imagem, vídeo e 3D por IA, para Claude Code (Desktop, VSCode, terminal).",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "visual-ai-producer",
+      "source": "./visual-ai-producer",
+      "description": "Transforma roteiro em cenas e prompts, monta moodboard, mantém personagem consistente, diz o custo antes e gera imagem, vídeo e modelo 3D por IA em lote aprovado. Higgsfield hoje; o gerador é trocável.",
+      "author": { "name": "Rodolfo" },
+      "category": "productivity",
+      "keywords": ["higgsfield", "imagem", "video", "3d", "ia", "moodboard", "seedance"]
+    }
+  ]
+}
