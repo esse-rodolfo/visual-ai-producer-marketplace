@@ -3,7 +3,7 @@
   "name": "visual-ai-producer-marketplace",
   "owner": { "name": "Rodolfo (esse-rodolfo)" },
   "description": "Marketplace do plugin visual-ai-producer — agente de direção artística e produção de imagem, vídeo e 3D por IA, para Claude Code (Desktop, VSCode, terminal).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "plugins": [
     {
       "name": "visual-ai-producer",

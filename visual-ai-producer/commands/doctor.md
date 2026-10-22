@@ -28,13 +28,18 @@ cat $U/VERSOES.md
 
 Esperado: a versão da biblioteca, pelo menos `8`, e a tabela.
 
-## 3. Scripts da biblioteca rodam
+## 3. Lint do Seedance roda
 
 ```bash
-(cd $U/oside && python -I scripts/validate.py 2>&1 | tail -2)
+(cd $U/oside && python -X utf8 -s scripts/seedance_lint.py --preflight --model seedance_2_0 --ar 16:9 --duration 4 "Slow push-in toward a silver car parked under a carport, soft daylight." 2>&1 | tail -1)
 ```
 
-Esperado: termina sem traceback. Aviso de versão ou de snapshot é só aviso.
+Esperado: uma linha de veredito ("Likely to pass..." ou parecida), sem
+traceback. `-X utf8` evita o erro de encoding do console do Windows; `-s`
+ignora o site do usuário. Não use `-I`: ele tira a pasta `scripts/` do path e
+os scripts importam uns aos outros. O `validate.py` da biblioteca é
+ferramenta de quem mantém o repositório e falha com snapshot velho; não serve
+de checagem aqui.
 
 ## 4. Estimativa de custo funciona
 
@@ -76,7 +81,9 @@ atualizar é o usuário.
 | `Not authenticated` / `Session expired` | sessão em `~/.config/higgsfield/` vencida | usuário roda `higgsfield auth login` |
 | `$U/oside/SKILL.md` ausente | envelope não baixado | `/visual-ai-producer:setup` passo 3 |
 | Menos de 8 skills em `$U/higgsfield` | pacote oficial não instalado | `/visual-ai-producer:setup` passo 4 |
-| `validate.py` com traceback | clone incompleto ou Python abaixo de 3.10 | repetir o passo 3 do setup; conferir `python --version` |
+| Lint com `ModuleNotFoundError` | rodado com `-I` ou fora de `$O` | `cd $U/oside` e `python -X utf8 -s` |
+| Lint com `UnicodeEncodeError` | sem `-X utf8` | acrescentar `-X utf8` |
+| Lint com outro traceback | clone incompleto ou Python abaixo de 3.10 | repetir o passo 3 do setup; conferir `python --version` |
 | `generate cost` falha | sessão vencida ou modelo renomeado | passo 1; `higgsfield model list` |
 | Catálogo global com `higgsfield-*` | alguém rodou `npx skills add` fora do envelope ou com `-g` | o usuário apaga essas pastas e `~/skills-lock.json`; o envelope continua valendo |
 | Deny do token dá `0` | `~/.claude/settings.json` sem a regra | usuário adiciona `"Bash(higgsfield auth token*)"` em `permissions.deny` |

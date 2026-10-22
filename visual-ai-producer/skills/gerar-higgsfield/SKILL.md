@@ -40,7 +40,7 @@ instead"): o nome é a pasta em `$H/`, não uma skill invocável.
 ## Sequência de um job
 
 1. Prompt pronto e aprovado (de `direcao-de-cena`).
-2. Lint, só para Seedance: `python -I "$O/scripts/seedance_lint.py" --preflight --model seedance_2_0 --ar 16:9 <arquivo-do-prompt>`. `FAIL` volta para o prompt.
+2. Lint, só para Seedance: `(cd "$O" && python -X utf8 -s scripts/seedance_lint.py --preflight --model seedance_2_0 --ar 16:9 --duration 4 --file <prompt.txt>)`. `FAIL` volta para o prompt; `WARN` se corrige ou se justifica.
 3. Custo: `higgsfield generate cost <modelo> --prompt "..." [flags]`. Mostre o número e espere o **Sim**.
 4. Geração: `higgsfield generate create <modelo> --prompt "..." [--image|--start-image|--end-image <foto-do-cliente>] [flags] --wait`. Imagem de referência só de `producao/entrada/` ou gerada por você.
 5. Salve o resultado em `producao/quadros/` ou `producao/clipes/`, olhe com `Read`, registre em `registro.md`.
@@ -50,7 +50,7 @@ Padrões: vídeo `seedance_2_0 --resolution 720p --generate_audio false --durati
 ## O que as skills de terceiro mandam e aqui não vale
 
 - Plano, assinatura, app e Canvas da Higgsfield: só o CLI e o MCP.
-- `python3`: nesta máquina é `python`, sempre com `-I` e a partir de `$O`. `--generate-audio`: no Seedance 2.0 é `--generate_audio false`.
+- `python3`: nesta máquina é `python -X utf8 -s`, a partir de `$O` (com `-I` os scripts não se acham). `--generate-audio`: no Seedance 2.0 é `--generate_audio false`.
 - Gravar no `db/ledger` da O-Side: o registro é o `registro.md` do projeto. O envelope é descartável na atualização. `higgsfield auth token` nunca.
 
 ## Como verificar que ainda funciona

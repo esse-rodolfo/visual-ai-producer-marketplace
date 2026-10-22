@@ -3,6 +3,17 @@
 Formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
 versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.1.1] - 2026-10-22
+
+### Corrigido
+
+- Os scripts da biblioteca da O-Side rodam com `python -X utf8 -s`, a partir
+  da pasta dela. Com `-I` eles não se acham (importam uns aos outros) e, sem
+  UTF-8, o console do Windows quebra no primeiro `✓`.
+- O doctor confere o lint do Seedance, que é o script que o agente usa, no
+  lugar do `validate.py`, que é ferramenta de manutenção da biblioteca e
+  falha com snapshot de especificação velho.
+
 ## [0.1.0] - 2026-10-22
 
 ### Adicionado
